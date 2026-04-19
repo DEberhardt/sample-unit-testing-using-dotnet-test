@@ -1,0 +1,49 @@
+trigger:
+  - main
+
+pool:
+  vmImage: "ubuntu-latest"
+
+steps:
+
+  - task: UseDotNet@2
+    displayName: "Use .NET 10 SDK"
+    inputs:
+      packageType: sdk
+      version: "10.x"
+
+  - task: DotNetCoreCLI@2
+    displayName: "Restore Dependencies"
+    inputs:
+      command: restore
+      projects: "**/*.sln"
+
+  - task: DotNetCoreCLI@2
+    displayName: "Build"
+    inputs:
+      command: build
+      projects: "**/*.sln"
+      arguments: "--no-restore --configuration Release"
+
+  - task: DotNetCoreCLI@2
+    displayName: "Unit Test"
+    inputs:
+      command: test
+      projects: "**/*.Tests.csproj"
+      arguments: "--no-build --configuration Release"
+      publishTestResults: true
+
+  - script: echo 'TODO - Deployment'
+    displayName: "TODO - Deployment"
+
+  - task: PowerShell@2
+    displayName: "TODO - Deployment (PowerShell)"
+    inputs:
+      targetType: inline
+      script: "Write-Host \"TODO - Deployment\""
+
+  - task: Bash@3
+    displayName: "TODO - Deployment (Bash)"
+    inputs:
+      targetType: inline
+      script: "echo \"TODO - Deployment\""
