@@ -1,0 +1,16 @@
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  PrimeService -> D:\Code\Public\sample-unit-testing-using-dotnet-test\PrimeService\bin\Release\net10.0\PrimeService.dll
+  PrimeService.Tests -> D:\Code\Public\sample-unit-testing-using-dotnet-test\PrimeService.Tests\bin\Release\net10.0\PrimeService.Tests.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.75
+Test run for D:\Code\Public\sample-unit-testing-using-dotnet-test\PrimeService.Tests\bin\Release\net10.0\PrimeService.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+
+Passed!  - Failed:     0, Passed:     1, Skipped:     0, Total:     1, Duration: 15 ms - PrimeService.Tests.dll (net10.0)

@@ -1,0 +1,99 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 681B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for mcr.microsoft.com/dotnet/runtime:10.0
+#2 ...
+
+#3 [internal] load metadata for mcr.microsoft.com/dotnet/sdk:10.0
+#3 DONE 0.2s
+
+#2 [internal] load metadata for mcr.microsoft.com/dotnet/runtime:10.0
+#2 DONE 0.2s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [runtime 1/4] FROM mcr.microsoft.com/dotnet/runtime:10.0@sha256:4f1f30cf0bb4ab0c8b2daa84613051683456f8df4a9bf7c812e20d74962992ac
+#5 resolve mcr.microsoft.com/dotnet/runtime:10.0@sha256:4f1f30cf0bb4ab0c8b2daa84613051683456f8df4a9bf7c812e20d74962992ac 0.0s done
+#5 DONE 0.0s
+
+#6 [builder 1/6] FROM mcr.microsoft.com/dotnet/sdk:10.0@sha256:212fe4cb74627d5adf9817a4088906ae3edff1bd853bb27565d4b46731efe61e
+#6 resolve mcr.microsoft.com/dotnet/sdk:10.0@sha256:212fe4cb74627d5adf9817a4088906ae3edff1bd853bb27565d4b46731efe61e 0.0s done
+#6 DONE 0.0s
+
+#7 [internal] load build context
+#7 transferring context: 31.35kB 0.0s done
+#7 DONE 0.0s
+
+#8 [builder 2/6] WORKDIR /app
+#8 CACHED
+
+#9 [builder 3/6] COPY . .
+#9 DONE 0.1s
+
+#10 [builder 4/6] RUN dotnet restore
+#10 0.720   Determining projects to restore...
+#10 1.057   Restored /app/PrimeService/PrimeService.csproj (in 68 ms).
+#10 5.279   Restored /app/PrimeService.Tests/PrimeService.Tests.csproj (in 4.29 sec).
+#10 DONE 5.4s
+
+#11 [builder 5/6] RUN dotnet build --configuration Release --no-restore
+#11 1.871   PrimeService -> /app/PrimeService/bin/Release/net10.0/PrimeService.dll
+#11 2.257   PrimeService.Tests -> /app/PrimeService.Tests/bin/Release/net10.0/PrimeService.Tests.dll
+#11 2.281 
+#11 2.282 Build succeeded.
+#11 2.282     0 Warning(s)
+#11 2.282     0 Error(s)
+#11 2.282 
+#11 2.282 Time Elapsed 00:00:02.00
+#11 DONE 2.3s
+
+#12 [builder 6/6] RUN dotnet test --no-build --configuration Release --verbosity normal
+#12 0.298 Build started 11/08/2026 13:11:12.
+#12 0.416      1>Project "/app/unit-testing-using-dotnet-test.sln" on node 1 (VSTest target(s)).
+#12 0.417      1>ValidateSolutionConfiguration:
+#12 0.418          Building solution configuration "Release|Any CPU".
+#12 0.684 Test run for /app/PrimeService.Tests/bin/Release/net10.0/PrimeService.Tests.dll (.NETCoreApp,Version=v10.0)
+#12 0.790 A total of 1 test files matched the specified pattern.
+#12 1.027 [xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.5+1b188a7b0a (64-bit .NET 10.0.14)
+#12 1.118 [xUnit.net 00:00:00.09]   Discovering: PrimeService.Tests
+#12 1.864 [xUnit.net 00:00:00.84]   Discovered:  PrimeService.Tests
+#12 1.966 [xUnit.net 00:00:00.94]   Starting:    PrimeService.Tests
+#12 2.028 [xUnit.net 00:00:01.00]   Finished:    PrimeService.Tests (ID = '3b91e1716cebc27bf12a27f38a83fdc7159b86b41124092e0b592182fe527f1e')
+#12 2.097   Passed Prime.UnitTests.Services.PrimeService_IsPrimeShould.IsPrime_InputIs1_ReturnFalse [7 ms]
+#12 2.098 
+#12 2.100 Test Run Successful.
+#12 2.100 Total tests: 1
+#12 2.100      Passed: 1
+#12 2.101  Total time: 1.3083 Seconds
+#12 2.117      1>Done Building Project "/app/unit-testing-using-dotnet-test.sln" (VSTest target(s)).
+#12 2.125 
+#12 2.125 Build succeeded.
+#12 2.125     0 Warning(s)
+#12 2.125     0 Error(s)
+#12 2.125 
+#12 2.125 Time Elapsed 00:00:01.82
+#12 DONE 2.1s
+
+#13 [runtime 2/4] WORKDIR /app
+#13 CACHED
+
+#14 [runtime 3/4] COPY --from=builder /app/PrimeService/bin/Release/net10.0 ./
+#14 CACHED
+
+#15 [runtime 4/4] RUN echo "Docker build and test complete!"
+#15 CACHED
+
+#16 exporting to image
+#16 exporting layers done
+#16 exporting manifest sha256:5e8bd1cba279bc9af92f10c2838c74ff7a60d4fd54687437506455cde3b4aa04 done
+#16 exporting config sha256:0f2f1bd9a70274127b4473bfe97de27cef9af9b41c75f29c10d455f8628a6bbc done
+#16 exporting attestation manifest sha256:9a182333466042c127005d7120960d996af67345fbfc9039a14ec8f1df2c0329 done
+#16 exporting manifest list sha256:7375ad4ef872c3225ee9d0dfcd9e1acda96e7c93872c195409ceac88a28e1819 done
+#16 naming to docker.io/library/dotnet-pipeline-test:latest done
+#16 unpacking to docker.io/library/dotnet-pipeline-test:latest done
+#16 DONE 0.0s
