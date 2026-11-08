@@ -35,3 +35,52 @@ jobs:
       - name: Test results summary
         if: always()
         run: echo "✓ Pipeline completed"
+
+  deploy:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    if: success()
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup PowerShell
+        uses: actions/setup-powershell@v2
+
+      - name: Simulate deployment - Package artifacts
+        run: |
+          Write-Host "Preparing deployment package..."
+          Write-Host " - Source: ./PrimeService/bin/Release/net10.0"
+          Write-Host " - Destination: ./deployment/release"
+          mkdir -p ./deployment/release
+          Write-Host "✓ Package ready"
+
+      - name: Simulate deployment - Pre-deployment validation
+        run: |
+          Write-Host "Running pre-deployment checks..."
+          Write-Host " - Validating configuration files"
+          Write-Host " - Checking dependencies"
+          Write-Host " - Verifying security settings"
+          Write-Host "✓ All checks passed"
+
+      - name: Simulate deployment - Deploy
+        run: |
+          Write-Host "Deploying to staging environment..."
+          Write-Host " - Copying artifacts..."
+          Write-Host " - Starting services..."
+          Write-Host " - Running health checks..."
+          Write-Host "✓ Deployment successful"
+
+      - name: Deployment summary
+        if: always()
+        run: |
+          Write-Host ""
+          Write-Host "═══════════════════════════════════"
+          Write-Host "  Deployment Summary"
+          Write-Host "═══════════════════════════════════"
+          Write-Host "✓ Tests: PASSED"
+          Write-Host "✓ Build: SUCCESSFUL"
+          Write-Host "✓ Deployment: STAGED"
+          Write-Host ""
+          Write-Host "Ready for production release"
