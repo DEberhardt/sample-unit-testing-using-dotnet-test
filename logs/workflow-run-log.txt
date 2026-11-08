@@ -1,0 +1,260 @@
+build-and-test  Set up job      2026-11-08T13:41:51.8333718Z Current runner version: '2.338.2'
+build-and-test  Set up job      2026-11-08T13:41:51.8360212Z ##[group]Runner Image Provisioner
+build-and-test  Set up job      2026-11-08T13:41:51.8361221Z Hosted Compute Agent
+build-and-test  Set up job      2026-11-08T13:41:51.8361837Z Version: 20261028.624
+build-and-test  Set up job      2026-11-08T13:41:51.8362441Z Commit: 54898b74c23fde5556c9b3c3a2290865feef0dfe
+build-and-test  Set up job      2026-11-08T13:41:51.8363189Z Build Date: 2026-10-28T21:51:42Z
+build-and-test  Set up job      2026-11-08T13:41:51.8363838Z Worker ID: {6cd2c36d-5f70-440b-9736-d2dbc7fdf09f}
+build-and-test  Set up job      2026-11-08T13:41:51.8364493Z Region: westus2
+build-and-test  Set up job      2026-11-08T13:41:51.8365049Z Cloud: Azure
+build-and-test  Set up job      2026-11-08T13:41:51.8365629Z ##[endgroup]
+build-and-test  Set up job      2026-11-08T13:41:51.8367323Z ##[group]Operating System
+build-and-test  Set up job      2026-11-08T13:41:51.8367935Z Ubuntu
+build-and-test  Set up job      2026-11-08T13:41:51.8368715Z 26.04.1
+build-and-test  Set up job      2026-11-08T13:41:51.8369291Z LTS
+build-and-test  Set up job      2026-11-08T13:41:51.8369786Z ##[endgroup]
+build-and-test  Set up job      2026-11-08T13:41:51.8370325Z ##[group]Runner Image
+build-and-test  Set up job      2026-11-08T13:41:51.8370927Z Image: ubuntu-26.04
+build-and-test  Set up job      2026-11-08T13:41:51.8371465Z Version: 20261101.186.1
+build-and-test  Set up job      2026-11-08T13:41:51.8372537Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261101.186/images/ubuntu/Ubuntu2604-Readme.md
+build-and-test  Set up job      2026-11-08T13:41:51.8374226Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261101.186
+build-and-test  Set up job      2026-11-08T13:41:51.8375158Z ##[endgroup]
+build-and-test  Set up job      2026-11-08T13:41:51.8376336Z ##[group]GITHUB_TOKEN Permissions
+build-and-test  Set up job      2026-11-08T13:41:51.8378999Z Contents: read
+build-and-test  Set up job      2026-11-08T13:41:51.8379603Z Metadata: read
+build-and-test  Set up job      2026-11-08T13:41:51.8380262Z Packages: read
+build-and-test  Set up job      2026-11-08T13:41:51.8380842Z ##[endgroup]
+build-and-test  Set up job      2026-11-08T13:41:51.8383202Z Secret source: Actions
+build-and-test  Set up job      2026-11-08T13:41:51.8384124Z Cache mode: write
+build-and-test  Set up job      2026-11-08T13:41:51.8384836Z Prepare workflow directory
+build-and-test  Set up job      2026-11-08T13:41:51.8730309Z Prepare all required actions
+build-and-test  Set up job      2026-11-08T13:41:51.8798711Z Getting action download info
+build-and-test  Set up job      2026-11-08T13:41:52.2103708Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+build-and-test  Set up job      2026-11-08T13:41:52.3293752Z Download action repository 'actions/setup-dotnet@v4' (SHA:67a3573c9a986a3f9c594539f4ab511d57bb3ce9)
+build-and-test  Set up job      2026-11-08T13:41:52.7476878Z Complete job name: build-and-test
+build-and-test  Checkout code   2026-11-08T13:41:52.8354505Z ##[group]Run actions/checkout@v4
+build-and-test  Checkout code   2026-11-08T13:41:52.8355393Z with:
+build-and-test  Checkout code   2026-11-08T13:41:52.8356026Z   repository: DEberhardt/sample-unit-testing-using-dotnet-test
+build-and-test  Checkout code   2026-11-08T13:41:52.8360505Z   token: ***
+build-and-test  Checkout code   2026-11-08T13:41:52.8361061Z   ssh-strict: true
+build-and-test  Checkout code   2026-11-08T13:41:52.8361596Z   ssh-user: git
+build-and-test  Checkout code   2026-11-08T13:41:52.8362109Z   persist-credentials: true
+build-and-test  Checkout code   2026-11-08T13:41:52.8362647Z   clean: true
+build-and-test  Checkout code   2026-11-08T13:41:52.8363229Z   sparse-checkout-cone-mode: true
+build-and-test  Checkout code   2026-11-08T13:41:52.8363807Z   fetch-depth: 1
+build-and-test  Checkout code   2026-11-08T13:41:52.8364304Z   fetch-tags: false
+build-and-test  Checkout code   2026-11-08T13:41:52.8364825Z   show-progress: true
+build-and-test  Checkout code   2026-11-08T13:41:52.8365337Z   lfs: false
+build-and-test  Checkout code   2026-11-08T13:41:52.8365856Z   submodules: false
+build-and-test  Checkout code   2026-11-08T13:41:52.8366405Z   set-safe-directory: true
+build-and-test  Checkout code   2026-11-08T13:41:52.8366974Z   allow-unsafe-pr-checkout: false
+build-and-test  Checkout code   2026-11-08T13:41:52.8367835Z ##[endgroup]
+build-and-test  Checkout code   2026-11-08T13:41:53.0855614Z Syncing repository: DEberhardt/sample-unit-testing-using-dotnet-test
+build-and-test  Checkout code   2026-11-08T13:41:53.0859304Z ##[group]Getting Git version info
+build-and-test  Checkout code   2026-11-08T13:41:53.0861128Z Working directory is '/home/runner/work/sample-unit-testing-using-dotnet-test/sample-unit-testing-using-dotnet-test'
+build-and-test  Checkout code   2026-11-08T13:41:53.0863343Z [command]/usr/bin/git version
+build-and-test  Checkout code   2026-11-08T13:41:53.0864155Z git version 2.56.0
+build-and-test  Checkout code   2026-11-08T13:41:53.0872563Z ##[endgroup]
+build-and-test  Checkout code   2026-11-08T13:41:53.0886859Z Temporarily overriding HOME='/home/runner/work/_temp/901d6520-a8db-4937-a06b-2b173376ea7a' before making global git config changes
+build-and-test  Checkout code   2026-11-08T13:41:53.0889537Z Adding repository directory to the temporary git global config as a safe directory
+build-and-test  Checkout code   2026-11-08T13:41:53.0892694Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/sample-unit-testing-using-dotnet-test/sample-unit-testing-using-dotnet-test
+build-and-test  Checkout code   2026-11-08T13:41:53.0969389Z Deleting the contents of '/home/runner/work/sample-unit-testing-using-dotnet-test/sample-unit-testing-using-dotnet-test'
+build-and-test  Checkout code   2026-11-08T13:41:53.0971840Z ##[group]Initializing the repository
+build-and-test  Checkout code   2026-11-08T13:41:53.0977255Z [command]/usr/bin/git init /home/runner/work/sample-unit-testing-using-dotnet-test/sample-unit-testing-using-dotnet-test
+build-and-test  Checkout code   2026-11-08T13:41:53.1072718Z hint: Using 'master' as the name for the initial branch. This default branch name
+build-and-test  Checkout code   2026-11-08T13:41:53.1074161Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+build-and-test  Checkout code   2026-11-08T13:41:53.1075158Z hint: to use in all of your new repositories, which will suppress this warning,
+build-and-test  Checkout code   2026-11-08T13:41:53.1075965Z hint: call:
+build-and-test  Checkout code   2026-11-08T13:41:53.1076481Z hint:
+build-and-test  Checkout code   2026-11-08T13:41:53.1077073Z hint:      git config --global init.defaultBranch <name>
+build-and-test  Checkout code   2026-11-08T13:41:53.1077750Z hint:
+build-and-test  Checkout code   2026-11-08T13:41:53.1078685Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+build-and-test  Checkout code   2026-11-08T13:41:53.1080280Z hint: 'development'. The just-created branch can be renamed via this command:
+build-and-test  Checkout code   2026-11-08T13:41:53.1081173Z hint:
+build-and-test  Checkout code   2026-11-08T13:41:53.1081664Z hint:      git branch -m <name>
+build-and-test  Checkout code   2026-11-08T13:41:53.1082216Z hint:
+build-and-test  Checkout code   2026-11-08T13:41:53.1082916Z hint: Disable this message with "git config set advice.defaultBranchName false"
+build-and-test  Checkout code   2026-11-08T13:41:53.1085744Z Initialized empty Git repository in /home/runner/work/sample-unit-testing-using-dotnet-test/sample-unit-testing-using-dotnet-test/.git/
+build-and-test  Checkout code   2026-11-08T13:41:53.1095473Z [command]/usr/bin/git remote add origin https://github.com/DEberhardt/sample-unit-testing-using-dotnet-test
+build-and-test  Checkout code   2026-11-08T13:41:53.1146399Z ##[endgroup]
+build-and-test  Checkout code   2026-11-08T13:41:53.1147395Z ##[group]Disabling automatic garbage collection
+build-and-test  Checkout code   2026-11-08T13:41:53.1150625Z [command]/usr/bin/git config --local gc.auto 0
+build-and-test  Checkout code   2026-11-08T13:41:53.1183161Z ##[endgroup]
+build-and-test  Checkout code   2026-11-08T13:41:53.1184394Z ##[group]Setting up auth
+build-and-test  Checkout code   2026-11-08T13:41:53.1190286Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+build-and-test  Checkout code   2026-11-08T13:41:53.1220616Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build-and-test  Checkout code   2026-11-08T13:41:53.1619980Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build-and-test  Checkout code   2026-11-08T13:41:53.1651991Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build-and-test  Checkout code   2026-11-08T13:41:53.1883459Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+build-and-test  Checkout code   2026-11-08T13:41:53.1913836Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+build-and-test  Checkout code   2026-11-08T13:41:53.2154136Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+build-and-test  Checkout code   2026-11-08T13:41:53.2215966Z ##[endgroup]
+build-and-test  Checkout code   2026-11-08T13:41:53.2216986Z ##[group]Fetching the repository
+build-and-test  Checkout code   2026-11-08T13:41:53.2228732Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +8ff5e991e0a342cebe424e6b683f1522b73f39fb:refs/remotes/pull/1/merge
+build-and-test  Checkout code   2026-11-08T13:41:53.5112171Z From https://github.com/DEberhardt/sample-unit-testing-using-dotnet-test
+build-and-test  Checkout code   2026-11-08T13:41:53.5113774Z  * [new ref]         8ff5e991e0a342cebe424e6b683f1522b73f39fb -> pull/1/merge
+build-and-test  Checkout code   2026-11-08T13:41:53.5116365Z ##[endgroup]
+build-and-test  Checkout code   2026-11-08T13:41:53.5117514Z ##[group]Determining the checkout info
+build-and-test  Checkout code   2026-11-08T13:41:53.5118866Z ##[endgroup]
+build-and-test  Checkout code   2026-11-08T13:41:53.5123113Z [command]/usr/bin/git sparse-checkout disable
+build-and-test  Checkout code   2026-11-08T13:41:53.5179065Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+build-and-test  Checkout code   2026-11-08T13:41:53.5217297Z ##[group]Checking out the ref
+build-and-test  Checkout code   2026-11-08T13:41:53.5220093Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/1/merge
+build-and-test  Checkout code   2026-11-08T13:41:53.5271979Z Note: switching to 'refs/remotes/pull/1/merge'.
+build-and-test  Checkout code   2026-11-08T13:41:53.5272996Z
+build-and-test  Checkout code   2026-11-08T13:41:53.5273694Z You are in 'detached HEAD' state. You can look around, make experimental
+build-and-test  Checkout code   2026-11-08T13:41:53.5274873Z changes and commit them, and you can discard any commits you make in this
+build-and-test  Checkout code   2026-11-08T13:41:53.5276141Z state without impacting any branches by switching back to a branch.
+build-and-test  Checkout code   2026-11-08T13:41:53.5276775Z
+build-and-test  Checkout code   2026-11-08T13:41:53.5277282Z If you want to create a new branch to retain commits you create, you may
+build-and-test  Checkout code   2026-11-08T13:41:53.5278445Z do so (now or later) by using -c with the switch command. Example:
+build-and-test  Checkout code   2026-11-08T13:41:53.5279223Z
+build-and-test  Checkout code   2026-11-08T13:41:53.5279661Z   git switch -c <new-branch-name>
+build-and-test  Checkout code   2026-11-08T13:41:53.5280092Z
+build-and-test  Checkout code   2026-11-08T13:41:53.5280481Z Or undo this operation with:
+build-and-test  Checkout code   2026-11-08T13:41:53.5281030Z
+build-and-test  Checkout code   2026-11-08T13:41:53.5281328Z   git switch -
+build-and-test  Checkout code   2026-11-08T13:41:53.5281706Z
+build-and-test  Checkout code   2026-11-08T13:41:53.5282201Z Turn off this advice by setting config variable advice.detachedHead to false
+build-and-test  Checkout code   2026-11-08T13:41:53.5282780Z
+build-and-test  Checkout code   2026-11-08T13:41:53.5283462Z HEAD is now at 8ff5e99 Merge e0954ba8dc6ef39811c88fbab0c54ddaee4623ad into 17e9ac03bc4aafb8e535999dd905ad1a17d7ff5d
+build-and-test  Checkout code   2026-11-08T13:41:53.5286029Z ##[endgroup]
+build-and-test  Checkout code   2026-11-08T13:41:53.5320616Z [command]/usr/bin/git log -1 --format=%H
+build-and-test  Checkout code   2026-11-08T13:41:53.5341996Z 8ff5e991e0a342cebe424e6b683f1522b73f39fb
+build-and-test  Setup .NET 10   2026-11-08T13:41:53.5652857Z ##[group]Run actions/setup-dotnet@v4
+build-and-test  Setup .NET 10   2026-11-08T13:41:53.5653913Z with:
+build-and-test  Setup .NET 10   2026-11-08T13:41:53.5654529Z   dotnet-version: 10.x
+build-and-test  Setup .NET 10   2026-11-08T13:41:53.5655095Z   cache: false
+build-and-test  Setup .NET 10   2026-11-08T13:41:53.5655616Z ##[endgroup]
+build-and-test  Setup .NET 10   2026-11-08T13:41:53.7459406Z (node:2662) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+build-and-test  Setup .NET 10   2026-11-08T13:41:53.7463419Z (Use `node --trace-deprecation ...` to show where the warning was created)
+build-and-test  Setup .NET 10   2026-11-08T13:41:53.9822748Z [command]/home/runner/work/_actions/actions/setup-dotnet/v4/externals/install-dotnet.sh --skip-non-versioned-files --runtime dotnet --channel LTS
+build-and-test  Setup .NET 10   2026-11-08T13:41:54.3511536Z dotnet-install: .NET Core Runtime with version '10.0.14' is already installed.
+build-and-test  Setup .NET 10   2026-11-08T13:41:54.3525250Z [command]/home/runner/work/_actions/actions/setup-dotnet/v4/externals/install-dotnet.sh --skip-non-versioned-files --channel 10.0
+build-and-test  Setup .NET 10   2026-11-08T13:41:54.6396039Z dotnet-install: .NET Core SDK with version '10.0.403' is already installed.
+build-and-test  Display .NET version    2026-11-08T13:41:54.6666086Z ##[group]Run dotnet --version
+build-and-test  Display .NET version    2026-11-08T13:41:54.6666606Z ^[[36;1mdotnet --version^[[0m
+build-and-test  Display .NET version    2026-11-08T13:41:54.6706293Z shell: /usr/bin/bash -e {0}
+build-and-test  Display .NET version    2026-11-08T13:41:54.6706699Z env:
+build-and-test  Display .NET version    2026-11-08T13:41:54.6706978Z   DOTNET_ROOT: /usr/share/dotnet
+build-and-test  Display .NET version    2026-11-08T13:41:54.6707289Z ##[endgroup]
+build-and-test  Display .NET version    2026-11-08T13:41:57.2963951Z 10.0.403
+build-and-test  Restore dependencies    2026-11-08T13:41:57.3093377Z ##[group]Run dotnet restore
+build-and-test  Restore dependencies    2026-11-08T13:41:57.3093730Z ^[[36;1mdotnet restore^[[0m
+build-and-test  Restore dependencies    2026-11-08T13:41:57.3131410Z shell: /usr/bin/bash -e {0}
+build-and-test  Restore dependencies    2026-11-08T13:41:57.3131756Z env:
+build-and-test  Restore dependencies    2026-11-08T13:41:57.3132008Z   DOTNET_ROOT: /usr/share/dotnet
+build-and-test  Restore dependencies    2026-11-08T13:41:57.3132317Z ##[endgroup]
+build-and-test  Restore dependencies    2026-11-08T13:42:00.7598412Z   Determining projects to restore...
+build-and-test  Restore dependencies    2026-11-08T13:42:01.9706407Z   Restored /home/runner/work/sample-unit-testing-using-dotnet-test/sample-unit-testing-using-dotnet-test/PrimeService/PrimeService.csproj (in 199 ms).
+build-and-test  Restore dependencies    2026-11-08T13:42:03.9706861Z   Restored /home/runner/work/sample-unit-testing-using-dotnet-test/sample-unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService.Tests.csproj (in 2.24 sec).
+build-and-test  Build   2026-11-08T13:42:04.0151392Z ##[group]Run dotnet build --configuration Release --no-restore
+build-and-test  Build   2026-11-08T13:42:04.0151994Z ^[[36;1mdotnet build --configuration Release --no-restore^[[0m
+build-and-test  Build   2026-11-08T13:42:04.0185226Z shell: /usr/bin/bash -e {0}
+build-and-test  Build   2026-11-08T13:42:04.0185752Z env:
+build-and-test  Build   2026-11-08T13:42:04.0186064Z   DOTNET_ROOT: /usr/share/dotnet
+build-and-test  Build   2026-11-08T13:42:04.0186406Z ##[endgroup]
+build-and-test  Build   2026-11-08T13:42:09.5936252Z   PrimeService -> /home/runner/work/sample-unit-testing-using-dotnet-test/sample-unit-testing-using-dotnet-test/PrimeService/bin/Release/net10.0/PrimeService.dll
+build-and-test  Build   2026-11-08T13:42:10.2850515Z   PrimeService.Tests -> /home/runner/work/sample-unit-testing-using-dotnet-test/sample-unit-testing-using-dotnet-test/PrimeService.Tests/bin/Release/net10.0/PrimeService.Tests.dll
+build-and-test  Build   2026-11-08T13:42:10.3215726Z
+build-and-test  Build   2026-11-08T13:42:10.3224204Z Build succeeded.
+build-and-test  Build   2026-11-08T13:42:10.3225225Z     0 Warning(s)
+build-and-test  Build   2026-11-08T13:42:10.3226050Z     0 Error(s)
+build-and-test  Build   2026-11-08T13:42:10.3226254Z
+build-and-test  Build   2026-11-08T13:42:10.3226607Z Time Elapsed 00:00:06.04
+build-and-test  Run unit tests  2026-11-08T13:42:10.3635641Z ##[group]Run dotnet test --no-build --configuration Release --verbosity normal --logger "console;verbosity=detailed"
+build-and-test  Run unit tests  2026-11-08T13:42:10.3636497Z ^[[36;1mdotnet test --no-build --configuration Release --verbosity normal --logger "console;verbosity=detailed"^[[0m
+build-and-test  Run unit tests  2026-11-08T13:42:10.3669209Z shell: /usr/bin/bash -e {0}
+build-and-test  Run unit tests  2026-11-08T13:42:10.3669535Z env:
+build-and-test  Run unit tests  2026-11-08T13:42:10.3669757Z   DOTNET_ROOT: /usr/share/dotnet
+build-and-test  Run unit tests  2026-11-08T13:42:10.3670019Z ##[endgroup]
+build-and-test  Run unit tests  2026-11-08T13:42:10.6562761Z Build started 11/08/2026 13:42:10.
+build-and-test  Run unit tests  2026-11-08T13:42:10.8203170Z      1>Project "/home/runner/work/sample-unit-testing-using-dotnet-test/sample-unit-testing-using-dotnet-test/unit-testing-using-dotnet-test.sln" on node 1 (VSTest target(s)).
+build-and-test  Run unit tests  2026-11-08T13:42:10.8207681Z      1>ValidateSolutionConfiguration:
+build-and-test  Run unit tests  2026-11-08T13:42:10.8208803Z          Building solution configuration "Release|Any CPU".
+build-and-test  Run unit tests  2026-11-08T13:42:11.4041152Z Test run for /home/runner/work/sample-unit-testing-using-dotnet-test/sample-unit-testing-using-dotnet-test/PrimeService.Tests/bin/Release/net10.0/PrimeService.Tests.dll (.NETCoreApp,Version=v10.0)
+build-and-test  Run unit tests  2026-11-08T13:42:12.0100769Z A total of 1 test files matched the specified pattern.
+build-and-test  Run unit tests  2026-11-08T13:42:12.0120844Z /home/runner/work/sample-unit-testing-using-dotnet-test/sample-unit-testing-using-dotnet-test/PrimeService.Tests/bin/Release/net10.0/PrimeService.Tests.dll
+build-and-test  Run unit tests  2026-11-08T13:42:12.4119274Z [xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.5+1b188a7b0a (64-bit .NET 10.0.14)
+build-and-test  Run unit tests  2026-11-08T13:42:12.5672788Z [xUnit.net 00:00:00.16]   Discovering: PrimeService.Tests
+build-and-test  Run unit tests  2026-11-08T13:42:12.7553566Z [xUnit.net 00:00:00.35]   Discovered:  PrimeService.Tests
+build-and-test  Run unit tests  2026-11-08T13:42:12.9401909Z [xUnit.net 00:00:00.53]   Starting:    PrimeService.Tests
+build-and-test  Run unit tests  2026-11-08T13:42:13.0529725Z [xUnit.net 00:00:00.65]   Finished:    PrimeService.Tests (ID = '7aaa0db37398866a7da64c9b34ea64297dd944bc451fb29fc28ceafa2287a182')
+build-and-test  Run unit tests  2026-11-08T13:42:13.1709088Z   Passed Prime.UnitTests.Services.PrimeService_IsPrimeShould.IsPrime_InputIs1_ReturnFalse [12 ms]
+build-and-test  Run unit tests  2026-11-08T13:42:13.1727469Z
+build-and-test  Run unit tests  2026-11-08T13:42:13.1761064Z Test Run Successful.
+build-and-test  Run unit tests  2026-11-08T13:42:13.1761831Z Total tests: 1
+build-and-test  Run unit tests  2026-11-08T13:42:13.1762273Z      Passed: 1
+build-and-test  Run unit tests  2026-11-08T13:42:13.1764080Z  Total time: 1.1648 Seconds
+build-and-test  Run unit tests  2026-11-08T13:42:13.2005608Z      1>Done Building Project "/home/runner/work/sample-unit-testing-using-dotnet-test/sample-unit-testing-using-dotnet-test/unit-testing-using-dotnet-test.sln" (VSTest target(s)).
+build-and-test  Run unit tests  2026-11-08T13:42:13.2123086Z
+build-and-test  Run unit tests  2026-11-08T13:42:13.2159305Z Build succeeded.
+build-and-test  Run unit tests  2026-11-08T13:42:13.2160343Z     0 Warning(s)
+build-and-test  Run unit tests  2026-11-08T13:42:13.2161282Z     0 Error(s)
+build-and-test  Run unit tests  2026-11-08T13:42:13.2179744Z
+build-and-test  Run unit tests  2026-11-08T13:42:13.2180253Z Time Elapsed 00:00:02.55
+build-and-test  Test results summary    2026-11-08T13:42:13.2438565Z ##[group]Run echo "✓ Pipeline completed"
+build-and-test  Test results summary    2026-11-08T13:42:13.2439052Z ^[[36;1mecho "✓ Pipeline completed"^[[0m
+build-and-test  Test results summary    2026-11-08T13:42:13.2470343Z shell: /usr/bin/bash -e {0}
+build-and-test  Test results summary    2026-11-08T13:42:13.2470702Z env:
+build-and-test  Test results summary    2026-11-08T13:42:13.2470928Z   DOTNET_ROOT: /usr/share/dotnet
+build-and-test  Test results summary    2026-11-08T13:42:13.2471191Z ##[endgroup]
+build-and-test  Test results summary    2026-11-08T13:42:13.2524376Z ✓ Pipeline completed
+build-and-test  Post Setup .NET 10      2026-11-08T13:42:13.2694714Z Post job cleanup.
+build-and-test  Post Setup .NET 10      2026-11-08T13:42:13.3891657Z (node:3129) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+build-and-test  Post Setup .NET 10      2026-11-08T13:42:13.3892448Z (Use `node --trace-deprecation ...` to show where the warning was created)
+build-and-test  Post Checkout code      2026-11-08T13:42:13.4054442Z Post job cleanup.
+build-and-test  Post Checkout code      2026-11-08T13:42:13.4885821Z [command]/usr/bin/git version
+build-and-test  Post Checkout code      2026-11-08T13:42:13.4923913Z git version 2.56.0
+build-and-test  Post Checkout code      2026-11-08T13:42:13.4957276Z Temporarily overriding HOME='/home/runner/work/_temp/c9520ad0-0567-45b5-8e81-fcb5532f819a' before making global git config changes
+build-and-test  Post Checkout code      2026-11-08T13:42:13.4958681Z Adding repository directory to the temporary git global config as a safe directory
+build-and-test  Post Checkout code      2026-11-08T13:42:13.4963493Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/sample-unit-testing-using-dotnet-test/sample-unit-testing-using-dotnet-test
+build-and-test  Post Checkout code      2026-11-08T13:42:13.5005962Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+build-and-test  Post Checkout code      2026-11-08T13:42:13.5042795Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build-and-test  Post Checkout code      2026-11-08T13:42:13.5294024Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build-and-test  Post Checkout code      2026-11-08T13:42:13.5318841Z http.https://github.com/.extraheader
+build-and-test  Post Checkout code      2026-11-08T13:42:13.5327963Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+build-and-test  Post Checkout code      2026-11-08T13:42:13.5372548Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build-and-test  Post Checkout code      2026-11-08T13:42:13.5611955Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+build-and-test  Post Checkout code      2026-11-08T13:42:13.5642459Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+build-and-test  Complete job    2026-11-08T13:42:13.6012276Z Cleaning up orphan processes
+build-and-test  Complete job    2026-11-08T13:42:13.6287360Z Terminate orphan process: pid (2896) (dotnet)
+build-and-test  Complete job    2026-11-08T13:42:13.6319955Z Terminate orphan process: pid (2973) (VBCSCompiler)
+build-and-test  Complete job    2026-11-08T13:42:13.6431190Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-dotnet@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+deploy  Set up job      2026-11-08T13:42:18.8393720Z Current runner version: '2.338.2'
+deploy  Set up job      2026-11-08T13:42:18.8423980Z ##[group]Runner Image Provisioner
+deploy  Set up job      2026-11-08T13:42:18.8425008Z Hosted Compute Agent
+deploy  Set up job      2026-11-08T13:42:18.8425732Z Version: 20261028.624
+deploy  Set up job      2026-11-08T13:42:18.8426486Z Commit: 54898b74c23fde5556c9b3c3a2290865feef0dfe
+deploy  Set up job      2026-11-08T13:42:18.8427403Z Build Date: 2026-10-28T21:51:42Z
+deploy  Set up job      2026-11-08T13:42:18.8428262Z Worker ID: {a9da2e38-a13f-4761-b588-64f0cecf68a3}
+deploy  Set up job      2026-11-08T13:42:18.8429150Z Region: eastus
+deploy  Set up job      2026-11-08T13:42:18.8429797Z Cloud: Azure
+deploy  Set up job      2026-11-08T13:42:18.8430504Z ##[endgroup]
+deploy  Set up job      2026-11-08T13:42:18.8432580Z ##[group]Operating System
+deploy  Set up job      2026-11-08T13:42:18.8433565Z Ubuntu
+deploy  Set up job      2026-11-08T13:42:18.8434350Z 26.04.1
+deploy  Set up job      2026-11-08T13:42:18.8434968Z LTS
+deploy  Set up job      2026-11-08T13:42:18.8435646Z ##[endgroup]
+deploy  Set up job      2026-11-08T13:42:18.8436359Z ##[group]Runner Image
+deploy  Set up job      2026-11-08T13:42:18.8437166Z Image: ubuntu-26.04
+deploy  Set up job      2026-11-08T13:42:18.8437855Z Version: 20261101.186.1
+deploy  Set up job      2026-11-08T13:42:18.8439223Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261101.186/images/ubuntu/Ubuntu2604-Readme.md
+deploy  Set up job      2026-11-08T13:42:18.8441486Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261101.186
+deploy  Set up job      2026-11-08T13:42:18.8442908Z ##[endgroup]
+deploy  Set up job      2026-11-08T13:42:18.8444467Z ##[group]GITHUB_TOKEN Permissions
+deploy  Set up job      2026-11-08T13:42:18.8446916Z Contents: read
+deploy  Set up job      2026-11-08T13:42:18.8447678Z Metadata: read
+deploy  Set up job      2026-11-08T13:42:18.8448402Z Packages: read
+deploy  Set up job      2026-11-08T13:42:18.8449041Z ##[endgroup]
+deploy  Set up job      2026-11-08T13:42:18.8451587Z Secret source: Actions
+deploy  Set up job      2026-11-08T13:42:18.8452906Z Cache mode: write
+deploy  Set up job      2026-11-08T13:42:18.8454146Z Prepare workflow directory
+deploy  Set up job      2026-11-08T13:42:18.8833142Z Prepare all required actions
+deploy  Set up job      2026-11-08T13:42:18.8952463Z Complete job name: deploy
+deploy  TODO - Deployment       2026-11-08T13:42:18.9904519Z ##[group]Run echo "TODO - Deployment"
+deploy  TODO - Deployment       2026-11-08T13:42:18.9905129Z ^[[36;1mecho "TODO - Deployment"^[[0m
+deploy  TODO - Deployment       2026-11-08T13:42:19.0312950Z shell: /usr/bin/bash -e {0}
+deploy  TODO - Deployment       2026-11-08T13:42:19.0313746Z ##[endgroup]
+deploy  TODO - Deployment       2026-11-08T13:42:19.0485570Z TODO - Deployment
+deploy  Complete job    2026-11-08T13:42:19.0629360Z Cleaning up orphan processes

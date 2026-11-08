@@ -97,6 +97,78 @@ docker run --rm dotnet-pipeline-test 2>&1 | tee docker-run-log.txt
 
 ---
 
+### GitHub CLI (gh) - Inspect Workflow Runs
+
+**Prerequisites:**
+
+- Install GitHub CLI: <https://cli.github.com/> or `winget install --id GitHub.cli`
+- Authenticate: `gh auth login`
+
+**List all workflow runs:**
+
+```bash
+gh run list --repo <OWNER>/<REPO>
+gh run list --repo <OWNER>/<REPO> --branch main
+```
+
+**View logs from a specific run:**
+
+```bash
+# View run details and status
+gh run view <RUN_ID>
+
+# View full logs for a run
+gh run view <RUN_ID> --log
+
+# Save logs to file
+gh run view <RUN_ID> --log > workflow-run-log.txt
+```
+
+**View logs for a specific job:**
+
+```bash
+# List jobs in a run
+gh run view <RUN_ID> --json jobs
+
+# View specific job logs
+gh run view <RUN_ID> --log | grep "build-and-test"
+```
+
+**Monitor a run in real-time:**
+
+```bash
+# Watch a running workflow
+gh run watch <RUN_ID>
+
+# View latest run
+gh run view --repo <OWNER>/<REPO>
+```
+
+**Download all logs as artifact:**
+
+```bash
+# Works if artifacts were uploaded during the workflow
+gh run download <RUN_ID> --dir ./logs
+```
+
+**Example workflow:**
+
+```bash
+# 1. List recent runs
+gh run list --repo YOUR_USERNAME/sample-unit-testing-using-dotnet-test --limit 5
+
+# 2. Get the latest run ID
+RUN_ID=$(gh run list --repo YOUR_USERNAME/sample-unit-testing-using-dotnet-test --limit 1 --json databaseId -q '.[0].databaseId')
+
+# 3. View the logs
+gh run view $RUN_ID --log
+
+# 4. Save to file
+gh run view $RUN_ID --log > github-workflow-run-$RUN_ID.txt
+```
+
+---
+
 ## File Artifacts Created
 
 - `run-pipeline-local.ps1` - PowerShell script for Windows
@@ -110,3 +182,11 @@ Each option will:
 ✓ Run unit tests
 ✓ Display colored progress and errors
 ✓ Exit with status code for CI/CD integration
+
+### Log files created
+
+- `pipeline-log-PS.txt`
+- `pipeline-log-BASH.txt`
+- `docker-log`
+- `docker-compose-log.txt`
+- `workflow-run-log.txt` - Github Actions log
