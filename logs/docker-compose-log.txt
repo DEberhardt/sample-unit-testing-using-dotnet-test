@@ -1,0 +1,115 @@
+time="2026-11-08T13:13:16Z" level=warning msg="D:\\Code\\Public\\sample-unit-testing-using-dotnet-test\\docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+ Image sample-unit-testing-using-dotnet-test-pipeline-simulator Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 671B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 681B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for mcr.microsoft.com/dotnet/sdk:10.0
+#3 DONE 0.1s
+
+#4 [internal] load metadata for mcr.microsoft.com/dotnet/runtime:10.0
+#4 DONE 0.1s
+
+#5 [internal] load .dockerignore
+#5 transferring context: 2B done
+#5 DONE 0.0s
+
+#6 [runtime 1/4] FROM mcr.microsoft.com/dotnet/runtime:10.0@sha256:4f1f30cf0bb4ab0c8b2daa84613051683456f8df4a9bf7c812e20d74962992ac
+#6 resolve mcr.microsoft.com/dotnet/runtime:10.0@sha256:4f1f30cf0bb4ab0c8b2daa84613051683456f8df4a9bf7c812e20d74962992ac 0.0s done
+#6 DONE 0.0s
+
+#7 [builder 1/6] FROM mcr.microsoft.com/dotnet/sdk:10.0@sha256:212fe4cb74627d5adf9817a4088906ae3edff1bd853bb27565d4b46731efe61e
+#7 resolve mcr.microsoft.com/dotnet/sdk:10.0@sha256:212fe4cb74627d5adf9817a4088906ae3edff1bd853bb27565d4b46731efe61e 0.0s done
+#7 DONE 0.0s
+
+#8 [internal] load build context
+#8 transferring context: 33.74kB 0.0s done
+#8 DONE 0.0s
+
+#9 [builder 2/6] WORKDIR /app
+#9 CACHED
+
+#10 [builder 3/6] COPY . .
+#10 DONE 0.1s
+
+#11 [builder 4/6] RUN dotnet restore
+#11 0.602   Determining projects to restore...
+#11 0.923   Restored /app/PrimeService/PrimeService.csproj (in 73 ms).
+#11 6.405   Restored /app/PrimeService.Tests/PrimeService.Tests.csproj (in 5.56 sec).
+#11 DONE 6.5s
+
+#12 [builder 5/6] RUN dotnet build --configuration Release --no-restore
+#12 1.789   PrimeService -> /app/PrimeService/bin/Release/net10.0/PrimeService.dll
+#12 2.146   PrimeService.Tests -> /app/PrimeService.Tests/bin/Release/net10.0/PrimeService.Tests.dll
+#12 2.174 
+#12 2.175 Build succeeded.
+#12 2.176     0 Warning(s)
+#12 2.176     0 Error(s)
+#12 2.176 
+#12 2.176 Time Elapsed 00:00:01.88
+#12 DONE 2.2s
+
+#13 [builder 6/6] RUN dotnet test --no-build --configuration Release --verbosity normal
+#13 0.310 Build started 11/08/2026 13:13:28.
+#13 0.414      1>Project "/app/unit-testing-using-dotnet-test.sln" on node 1 (VSTest target(s)).
+#13 0.415      1>ValidateSolutionConfiguration:
+#13 0.415          Building solution configuration "Release|Any CPU".
+#13 0.681 Test run for /app/PrimeService.Tests/bin/Release/net10.0/PrimeService.Tests.dll (.NETCoreApp,Version=v10.0)
+#13 0.780 A total of 1 test files matched the specified pattern.
+#13 1.027 [xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.5+1b188a7b0a (64-bit .NET 10.0.14)
+#13 1.117 [xUnit.net 00:00:00.09]   Discovering: PrimeService.Tests
+#13 1.230 [xUnit.net 00:00:00.20]   Discovered:  PrimeService.Tests
+#13 1.331 [xUnit.net 00:00:00.30]   Starting:    PrimeService.Tests
+#13 1.390 [xUnit.net 00:00:00.36]   Finished:    PrimeService.Tests (ID = '3b91e1716cebc27bf12a27f38a83fdc7159b86b41124092e0b592182fe527f1e')
+#13 1.456   Passed Prime.UnitTests.Services.PrimeService_IsPrimeShould.IsPrime_InputIs1_ReturnFalse [6 ms]
+#13 1.457 
+#13 1.459 Test Run Successful.
+#13 1.460 Total tests: 1
+#13 1.460      Passed: 1
+#13 1.460  Total time: 0.6776 Seconds
+#13 1.475      1>Done Building Project "/app/unit-testing-using-dotnet-test.sln" (VSTest target(s)).
+#13 1.483 
+#13 1.483 Build succeeded.
+#13 1.483     0 Warning(s)
+#13 1.483     0 Error(s)
+#13 1.483 
+#13 1.483 Time Elapsed 00:00:01.17
+#13 DONE 1.5s
+
+#14 [runtime 3/4] COPY --from=builder /app/PrimeService/bin/Release/net10.0 ./
+#14 CACHED
+
+#15 [runtime 2/4] WORKDIR /app
+#15 CACHED
+
+#16 [runtime 4/4] RUN echo "Docker build and test complete!"
+#16 CACHED
+
+#17 exporting to image
+#17 exporting layers done
+#17 exporting manifest sha256:f876713003441edcf6fbb1b37915d8109641e7ed7736d68434eaf011710268a9 done
+#17 exporting config sha256:65cf1d2311dadcd6ce96a2f435146f77dd700583b9afa1b1d114162ff9ac4274 done
+#17 exporting attestation manifest sha256:19010fc3107795e37d7bea9196f2bf76d32275fee476cf049fb8165a80e38d47 done
+#17 exporting manifest list sha256:7d28d7e4634f36182d4623d378340e18c807d9b4afb7657cd9e75192f75a4514 done
+#17 naming to docker.io/library/sample-unit-testing-using-dotnet-test-pipeline-simulator:latest done
+#17 unpacking to docker.io/library/sample-unit-testing-using-dotnet-test-pipeline-simulator:latest done
+#17 DONE 0.0s
+
+#18 resolving provenance for metadata file
+#18 DONE 0.0s
+ Image sample-unit-testing-using-dotnet-test-pipeline-simulator Built 
+ Network sample-unit-testing-using-dotnet-test_default Creating 
+ Network sample-unit-testing-using-dotnet-test_default Creating 
+ Network sample-unit-testing-using-dotnet-test_default Created 
+ Network sample-unit-testing-using-dotnet-test_default Created 
+ Container dotnet-pipeline-test Creating 
+ Container dotnet-pipeline-test Created 
+Attaching to dotnet-pipeline-test
+ Container dotnet-pipeline-test Starting 
+ Container dotnet-pipeline-test Started 
+
+[Kdotnet-pipeline-test exited with code 0
